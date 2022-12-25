@@ -1,0 +1,34 @@
+﻿using System;
+
+namespace Project1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, i, sum;
+            int mn, mx;
+
+            Console.Write("Input the starting value : ");
+            mn = int.Parse(Console.ReadLine());
+            Console.Write("Input the ending value : ");
+            mx = int.Parse(Console.ReadLine());
+            Console.Write("The Perfect numbers within the given range : ");
+            for (n = mn; n <= mx; n++)
+            {
+                i = 1;
+                sum = 0;
+                while (i < n)
+                {
+                    if (n % i == 0)
+                        sum = sum + i;
+                    i++;
+                }
+                if (sum == n)
+                    Console.Write("{0} ", n);
+            }
+            Console.Write("\n");
+
+        }
+    }
+}
